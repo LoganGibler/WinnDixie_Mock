@@ -7,21 +7,46 @@ import { IoIosArrowForward } from "react-icons/io";
 import { PiGear } from "react-icons/pi";
 import MobileSubMenu from "./MobileSubmenu";
 
-const Menu = ({ menuActive, setMenuActive }) => {
-  const [mobileSubMenuActive, setMobileSubMenuActive] = useState(false);
-
+const Menu = ({
+  menuActive,
+  setMenuActive,
+  setMobileSubOptionTitle,
+  setSubOptions,
+  setMobileSubMenuActive,
+}) => {
   const handleMenuClose = () => {
     setMenuActive(!menuActive);
+  };
+  const shoppingOptions = [
+    "Shop online",
+    "Gift cards",
+    "Departments",
+    "Recipes",
+    "Our brands",
+    "Share a meal",
+  ];
+  const rewardOptions = [
+    "Winn-Dixie rewards",
+    "Download the app",
+    "Eligible Products",
+  ];
+  const pharmacyOptions = ["Pharmacy Closures"];
+  const savingOptions = ["Weekly Ad", "Digital Coupons", "Coupon Kiosk"];
+
+  const handleSubmenuOpen = (optionTitle, subOptions) => {
+    setMobileSubMenuActive(true);
+    setMobileSubOptionTitle(optionTitle);
+    setSubOptions(subOptions);
   };
 
   return (
     <Transition
       appear={true}
       show={menuActive}
-      enter="transition-all duration-450"
+      enter="transition-all duration-400"
       enterFrom="-ml-[20rem]"
       enterTo=""
-      leave="transition-all duration-500"
+      leave="transition-all duration-400"
       leaveTo="-ml-[20rem]"
     >
       <div className="fixed top-0 bottom-0 w-[310px] bg-[#f9f9f9] z-10">
@@ -60,9 +85,7 @@ const Menu = ({ menuActive, setMenuActive }) => {
           <div className="flex flex-col mt-3 ml-0 font-semibold text-[17px] border-b-[1px] pb-6 border-slate-300">
             <div
               className="flex mt-3 py-2 rounded-lg px-2 hover:cursor-pointer hover:bg-slate-200"
-              onClick={() => {
-                setMobileSubMenuActive(true);
-              }}
+              onClick={() => handleSubmenuOpen("Shopping", shoppingOptions)}
             >
               <p className="">Shopping</p>
               <div className="flex grow justify-end">
@@ -72,9 +95,7 @@ const Menu = ({ menuActive, setMenuActive }) => {
 
             <div
               className="flex mt-3 py-2 rounded-lg px-2 hover:cursor-pointer hover:bg-slate-200"
-              onClick={() => {
-                setMobileSubMenuActive(true);
-              }}
+              onClick={() => handleSubmenuOpen("Savings", savingOptions)}
             >
               <p className="">Savings</p>
               <div className="flex grow justify-end">
@@ -84,9 +105,7 @@ const Menu = ({ menuActive, setMenuActive }) => {
 
             <div
               className="flex mt-3 py-2 rounded-lg px-2 hover:cursor-pointer hover:bg-slate-200"
-              onClick={() => {
-                setMobileSubMenuActive(true);
-              }}
+              onClick={() => handleSubmenuOpen("Rewards", rewardOptions)}
             >
               <p className="">Rewards</p>
               <div className="flex grow justify-end">
@@ -96,9 +115,7 @@ const Menu = ({ menuActive, setMenuActive }) => {
 
             <div
               className="flex mt-3 py-2 rounded-lg px-2 hover:cursor-pointer hover:bg-slate-200"
-              onClick={() => {
-                setMobileSubMenuActive(true);
-              }}
+              onClick={() => handleSubmenuOpen("Pharmacy", pharmacyOptions)}
             >
               <p className="">Pharmacy</p>
               <div className="flex grow justify-end">

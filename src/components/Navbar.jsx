@@ -15,6 +15,7 @@ const Navbar = ({
   setShowDropdown,
 }) => {
   const [dropdownActive, setDropdownActive] = useState("");
+  const [activeNavLink, setActiveNavLink] = useState("");
 
   const shoppingOptions = [
     "Shop online",
@@ -39,12 +40,11 @@ const Navbar = ({
   };
 
   const handleDropdownClick = (option) => {
-    if (dropdownActive === option) {
-      setDropdownActive(false);
-      return setDropdownActive("");
-    } else {
-      setDropdownActive(option);
-      setShowDropdown(true);
+    setDropdownActive(option);
+    setShowDropdown(true);
+
+    if (option === "") {
+      setShowDropdown(false);
     }
   };
 
@@ -65,6 +65,9 @@ const Navbar = ({
         <div className="lg-:hidden mt-0.5 mr-3 lg-:mr-0 flex grow justify-center">
           <img src={logo} className="h-auto hover:cursor-pointer"></img>
         </div>
+        <div className="lg:hidden hidden lg-:flex">
+          <img src={logo} className="h-auto hover:cursor-pointer"></img>
+        </div>
         <div className="hidden lg-:flex grow justify-end text-slate-100">
           <div className="flex mx-2 px-2 font-semibold mt-[6px]">
             <LuStore className="text-lg mt-[3px] mr-1.5" />
@@ -80,18 +83,35 @@ const Navbar = ({
       </div>
 
       <div className="flex text-slate-100 font-semibold mt-1">
-        <div className="hidden ml-0 lg-:flex">
+        <div className="hidden ml-0 lg:flex">
           <img src={logo} className="h-auto hover:cursor-pointer"></img>
         </div>
 
-        <div className="text-slate-100 mt-[3px] font-semibold lg-:text hidden lg-:flex">
+        <div className="text-slate-100 mt-[3px] lg-:grow lg-:justify-center font-semibold lg-:text hidden lg-:flex lg-:text-xl">
           <div className="mr-3 ml-[2rem] mt-[3px] border-[#c8102e] border-b-[1px] hover:cursor-pointer hover:border-slate-100 pb-1">
-            <p className="flex" onClick={() => handleDropdownClick("Shopping")}>
+            <p
+              className="flex"
+              onClick={() =>
+                dropdownActive === "Shopping"
+                  ? handleDropdownClick("")
+                  : handleDropdownClick("Shopping")
+              }
+              onMouseOver={() => {
+                setActiveNavLink("Shopping");
+              }}
+              onMouseLeave={() => {
+                setActiveNavLink("");
+              }}
+            >
               Shopping{" "}
-              {dropdownActive !== "Shopping" ? (
-                <IoIosArrowUp className="text-xl ml-0.5 mt-1" />
+              {activeNavLink === "Shopping" ? (
+                dropdownActive !== "Shopping" ? (
+                  <IoIosArrowUp className="text-xl ml-0.5 mt-1" />
+                ) : (
+                  <IoIosArrowDown className="text-xl ml-0.5 mt-1" />
+                )
               ) : (
-                <IoIosArrowDown className="text-xl ml-0.5 mt-1" />
+                <IoIosArrowUp className="text-xl ml-0.5 mt-1 text-[#c8102e]" />
               )}
             </p>
 
@@ -104,12 +124,29 @@ const Navbar = ({
           </div>
 
           <div className="mx-3 mt-[3px] border-[#c8102e] border-b-[1px] hover:cursor-pointer hover:border-slate-100 pb-1">
-            <p className="flex" onClick={() => handleDropdownClick("Savings")}>
+            <p
+              className="flex"
+              onClick={() =>
+                dropdownActive === "Savings"
+                  ? handleDropdownClick("")
+                  : handleDropdownClick("Savings")
+              }
+              onMouseOver={() => {
+                setActiveNavLink("Savings");
+              }}
+              onMouseLeave={() => {
+                setActiveNavLink("");
+              }}
+            >
               Savings{" "}
-              {dropdownActive !== "Savings" ? (
-                <IoIosArrowUp className="text-xl ml-0.5 mt-1" />
+              {activeNavLink === "Savings" ? (
+                dropdownActive !== "Savings" ? (
+                  <IoIosArrowUp className="text-xl ml-0.5 mt-1" />
+                ) : (
+                  <IoIosArrowDown className="text-xl ml-0.5 mt-1" />
+                )
               ) : (
-                <IoIosArrowDown className="text-xl ml-0.5 mt-1" />
+                <IoIosArrowUp className="text-xl ml-0.5 mt-1 text-[#c8102e]" />
               )}
             </p>
             {dropdownActive === "Savings" ? (
@@ -121,12 +158,29 @@ const Navbar = ({
           </div>
 
           <div className="mx-3 mt-[3px] border-[#c8102e] border-b-[1px] hover:cursor-pointer hover:border-slate-100 pb-1">
-            <p className="flex" onClick={() => handleDropdownClick("Rewards")}>
+            <p
+              className="flex"
+              onClick={() =>
+                dropdownActive === "Rewards"
+                  ? handleDropdownClick("")
+                  : handleDropdownClick("Rewards")
+              }
+              onMouseOver={() => {
+                setActiveNavLink("Rewards");
+              }}
+              onMouseLeave={() => {
+                setActiveNavLink("");
+              }}
+            >
               Rewards{" "}
-              {dropdownActive !== "Rewards" ? (
-                <IoIosArrowUp className="text-xl ml-0.5 mt-1" />
+              {activeNavLink === "Rewards" ? (
+                dropdownActive !== "Rewards" ? (
+                  <IoIosArrowUp className="text-xl ml-0.5 mt-1" />
+                ) : (
+                  <IoIosArrowDown className="text-xl ml-0.5 mt-1" />
+                )
               ) : (
-                <IoIosArrowDown className="text-xl ml-0.5 mt-1" />
+                <IoIosArrowUp className="text-xl ml-0.5 mt-1 text-[#c8102e]" />
               )}
             </p>
             {dropdownActive === "Rewards" ? (
@@ -138,12 +192,29 @@ const Navbar = ({
           </div>
 
           <div className="mx-3 mt-[3px] border-[#c8102e] border-b-[1px] hover:cursor-pointer hover:border-slate-100 pb-1">
-            <p className="flex" onClick={() => handleDropdownClick("Pharmacy")}>
+            <p
+              className="flex"
+              onClick={() =>
+                dropdownActive === "Pharmacy"
+                  ? handleDropdownClick("")
+                  : handleDropdownClick("Pharmacy")
+              }
+              onMouseOver={() => {
+                setActiveNavLink("Pharmacy");
+              }}
+              onMouseLeave={() => {
+                setActiveNavLink("");
+              }}
+            >
               Pharmacy{" "}
-              {dropdownActive !== "Pharmacy" ? (
-                <IoIosArrowUp className="text-xl ml-0.5 mt-1" />
+              {activeNavLink === "Pharmacy" ? (
+                dropdownActive !== "Pharmacy" ? (
+                  <IoIosArrowUp className="text-xl ml-0.5 mt-1" />
+                ) : (
+                  <IoIosArrowDown className="text-xl ml-0.5 mt-1" />
+                )
               ) : (
-                <IoIosArrowDown className="text-xl ml-0.5 mt-1" />
+                <IoIosArrowUp className="text-xl ml-0.5 mt-1 text-[#c8102e]" />
               )}
             </p>
             {dropdownActive === "Pharmacy" ? (
@@ -155,7 +226,7 @@ const Navbar = ({
           </div>
         </div>
 
-        <div className="hidden lg-:flex grow justify-end mt-[6px]">
+        <div className="hidden lg-:flex grow justify-end mt-[10px]">
           <p className="border-[#c8102e] border-b-[1px] hover:cursor-pointer hover:border-slate-100 pb-1">
             Shop Online
           </p>

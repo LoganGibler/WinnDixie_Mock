@@ -6,7 +6,7 @@ const Subdropdown = ({ options, setHoveredOption }) => {
   if (options[0] === "Digital") {
     return (
       <div
-        className="flex flex-col bg-slate-200 px-2 py-1 rounded-tr-lg rounded-br-lg text-black"
+        className="flex flex-col bg-slate-200 px-3 py-1 rounded-tr-lg rounded-br-lg text-black"
         onMouseLeave={() => {
           setHoveredOption("");
         }}
@@ -32,18 +32,15 @@ const Subdropdown = ({ options, setHoveredOption }) => {
   }
   return (
     <div
-      className="flex flex-col bg-slate-200 px-2 py-1 rounded-tr-lg rounded-br-lg text-black"
+      className="flex flex-col bg-slate-200 px-0 py-0 rounded-tr-lg rounded-br-lg text-black"
       onMouseLeave={() => {
         setHoveredOption("");
       }}
     >
       {options.map((option, index) => {
         return (
-          <div
-            key={index}
-            className="flex hover:bg-white py-2 pr-2 pl-2 rounded-lg"
-          >
-            <p className="whitespace-nowrap">{option}</p>
+          <div key={index} className="flex hover:bg-white py-2 pr-2 pl-2 ">
+            <p className="whitespace-nowrap text-base">{option}</p>
             <div className="flex grow justify-end ml-3">
               <IoIosArrowForward className="mt-1 text-lg ml-4 mr-1" />
             </div>
