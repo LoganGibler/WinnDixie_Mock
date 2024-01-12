@@ -5,3 +5,4 @@ export { default as Subdropdown } from "./Subdropdown";
 export { default as MobileSubMenu } from "./MobileSubmenu";
 export { default as Banner } from "./Banner";
 export { default as Deals } from "./Deals";
+export { default as Coupons } from "./Coupons";
