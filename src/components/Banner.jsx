@@ -17,7 +17,7 @@ const Banner = () => {
       <div className="flex flex-col lg-:flex-row lg-:hidden md:p-[1rem]">
         <img
           src={smallBanner}
-          className="sm:hidden w-full h-auto hover:cursor-pointer rounded-md"
+          className="sm:hidden w-full h-auto hover:cursor-pointer"
         ></img>
         <img
           src={MainBanner}
@@ -26,7 +26,7 @@ const Banner = () => {
 
         <img
           src={shortcar}
-          className="sm:hidden hover:cursor-pointer rounded-md"
+          className="sm:hidden hover:cursor-pointer"
         />
         <img
           src={longcar}
@@ -46,7 +46,7 @@ const Banner = () => {
       <div className="flex flex-col sm:flex-row shadow1 py-3 pl-[2rem] lg:pl-[14rem] sm:mt-5">
         <p>Don’t miss out on savings picked just for you!</p>
         <div className="flex sm:ml-3">
-          <p className="font-bold">Log in / Sign up</p>
+          <p className="font-bold cursor-pointer">Log in / Sign up</p>
           <IoIosArrowForward className="text-lg mt-1 ml-1" />
         </div>
       </div>

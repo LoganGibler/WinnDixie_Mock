@@ -3,6 +3,7 @@ import "./App.css";
 import soda from "../src/imgs/sodacoupon.png";
 import litter from "../src/imgs/littercoupon.png";
 import gain from "../src/imgs/gaincoupon.png";
+import "flickity/dist/flickity.min.css";
 import {
   Navbar,
   Menu,
@@ -10,6 +11,7 @@ import {
   Banner,
   Deals,
   Coupons,
+  WeeklyAd,
 } from "./components";
 
 function App() {
@@ -53,7 +55,7 @@ function App() {
   ];
 
   return (
-    <div className="flex flex-col bg-[#f9f9f9]">
+    <div className="flex flex-col bg-white">
       <Navbar
         menuActive={menuActive}
         setMenuActive={setMenuActive}
@@ -78,8 +80,16 @@ function App() {
         setMobileSubMenuActive={setMobileSubMenuActive}
       />
       <Banner />
-      <Deals />
-      <Coupons coupons={coupons} />
+      <div className="">
+        <div className="flex flex-col">
+          <Deals />
+          <Coupons coupons={coupons} />
+          <div className="md:hidden">
+            <WeeklyAd className="flex justify-center" />
+          </div>
+        </div>
+      </div>
+
       {menuActive || showDropdown ? (
         <div
           className="overlay1"

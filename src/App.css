@@ -1,3 +1,4 @@
+/* @import "flickity/css/flickity.css"; */
 #root {
   background-color: #f9f9f9;
 }
@@ -39,4 +40,19 @@
   /* text-overflow: ellipsis; */
   max-height: 100%;
   /* Adjust the height based on the number of lines you want */
+}
+
+/* weeklyAd.css */
+.carousel-cell {
+  width: 100%;
+}
+
+.react-carousel-prev,
+.react-carousel-next {
+  background: transparent;
+}
+
+.react-carousel-prev:hover,
+.react-carousel-next:hover {
+  background: rgba(0, 0, 0, 0.2);
 }

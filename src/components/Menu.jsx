@@ -5,7 +5,6 @@ import whiteWDlogo from "../imgs/white-bg-WDlogo.png";
 import { CgProfile } from "react-icons/cg";
 import { IoIosArrowForward } from "react-icons/io";
 import { PiGear } from "react-icons/pi";
-import MobileSubMenu from "./MobileSubmenu";
 
 const Menu = ({
   menuActive,
