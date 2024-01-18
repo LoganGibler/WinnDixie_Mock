@@ -12,6 +12,7 @@ import {
   Deals,
   Coupons,
   WeeklyAd,
+  WeeklyAdCards,
 } from "./components";
 
 function App() {
@@ -81,13 +82,26 @@ function App() {
       />
       <Banner />
       <div className="">
-        <div className="flex flex-col">
+        <div className="flex flex-col lg:hidden">
           <Deals />
           <Coupons coupons={coupons} />
-          <div className="md:hidden">
-            <WeeklyAd className="flex justify-center" />
+        </div>
+        <div className="flex justify-center">
+          <div className="hidden lg:flex flex-col">
+            <Deals />
+            <Coupons coupons={coupons} />
           </div>
         </div>
+        <div className="hidden md:flex justify-center">
+          <WeeklyAdCards />
+        </div>
+        <div className="md:hidden">
+          <WeeklyAd className="flex justify-center" />
+        </div>
+
+        {/* <div className="hidden md:flex flex-col">
+          <WeeklyAdCards />
+        </div> */}
       </div>
 
       {menuActive || showDropdown ? (
