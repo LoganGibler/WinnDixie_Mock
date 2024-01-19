@@ -5,10 +5,10 @@ import { IoIosArrowForward } from "react-icons/io";
 const Coupons = ({ coupons }) => {
   return (
     <div className="flex flex-col pb-[3rem]">
-      <div className="flex pl-4 md:px-[1rem] md:justify-center pb-2 border-b-[0px] border-slate-300">
-        <div className="flex justify-start w-[820px] ">
+      <div className="flex pl-4 md:px-[1rem] md:justify-center border-b-[0px] border-slate-300">
+        <div className="flex justify-start w-[820px] lg:w-[700px]">
           <h1 className="font-bold text-xl md:text-2xl">Digital coupons</h1>
-          <div className="hidden md:flex justify-end grow mt-1.5 font-semiboldtext-[#c8102e] hover:cursor-pointer">
+          <div className="hidden md:flex justify-end grow mt-1.5 lg:pb-3 font-semiboldtext-[#c8102e] hover:cursor-pointer">
             See all coupons <IoIosArrowForward className="text-xl  mt-0.5" />
           </div>
         </div>
@@ -17,7 +17,7 @@ const Coupons = ({ coupons }) => {
         {coupons.map((coupon, index) => {
           return (
             <div
-              className="flex bg-inherit py-4 px-3 border-b-[1px] border-slate-300 md:flex-col md:mx-2.5 md:rounded-md md:border-[1px] md:border-slate-300 md:mt-2 md:px-3 md:py-3 md:w-[260px]"
+              className="flex bg-inherit py-4 px-3 border-b-[1px] border-slate-300 md:flex-col md:mx-2.5 md:rounded-md md:border-[1px] md:border-slate-300 md:mt-2 md:px-3 md:py-3 md:w-[260px] lg:w-[220px] xl:w-[250px]"
               key={index}
             >
               <div className="flex items-center justify-center mr-3 md:h-[160px]">

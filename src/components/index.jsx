@@ -7,4 +7,7 @@ export { default as Banner } from "./Banner";
 export { default as Deals } from "./Deals";
 export { default as Coupons } from "./Coupons";
 export { default as WeeklyAd } from "./WeeklyAd";
-export {default as WeeklyAdCards} from "./WeeklyAdCards";
+export { default as WeeklyAdCards } from "./WeeklyAdCards";
+export { default as WaysToSaveDeals } from "./WaysToSaveDeals";
+export { default as JoinApp } from "./JoinApp";
+export { default as Trending } from "./Trending";

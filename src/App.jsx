@@ -13,6 +13,9 @@ import {
   Coupons,
   WeeklyAd,
   WeeklyAdCards,
+  WaysToSaveDeals,
+  JoinApp,
+  Trending,
 } from "./components";
 
 function App() {
@@ -91,8 +94,12 @@ function App() {
             <Deals />
             <Coupons coupons={coupons} />
           </div>
+          <div className="hidden lg:flex justify-center ml-2">
+            <WeeklyAdCards />
+          </div>
         </div>
-        <div className="hidden md:flex justify-center">
+
+        <div className="hidden md:flex lg:hidden justify-center">
           <WeeklyAdCards />
         </div>
         <div className="md:hidden">
@@ -102,6 +109,16 @@ function App() {
         {/* <div className="hidden md:flex flex-col">
           <WeeklyAdCards />
         </div> */}
+      </div>
+
+      <div className="">
+        <WaysToSaveDeals />
+      </div>
+      <div>
+        <JoinApp />
+      </div>
+      <div>
+        <Trending />
       </div>
 
       {menuActive || showDropdown ? (

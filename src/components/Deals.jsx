@@ -29,11 +29,11 @@ const Deals = () => {
   ];
 
   return (
-    <div className="flex flex-col mt-2 pb-4">
+    <div className="flex flex-col mt-2 pb-4 lg:pb-10">
       <div className="flex pl-4 pb-1 md:px-[1rem] md:justify-center">
-        <div className="flex justify-start w-[820px]">
+        <div className="flex justify-start w-[820px] lg:w-[700px]">
           <h1 className="font-bold text-xl md:text-2xl ">Deals near you</h1>
-          <div className="hidden md:flex justify-end grow mt-1.5 font-semibold text-[#c8102e] hover:cursor-pointer">
+          <div className="hidden md:flex justify-end grow mt-1.5 font-semibold text-[#c8102e] hover:cursor-pointer lg:pb-3">
             See all deals <IoIosArrowForward className="text-xl  mt-0.5" />
           </div>
         </div>
@@ -43,7 +43,7 @@ const Deals = () => {
           return (
             <div
               key={index}
-              className="flex px-2 py-3 mt-1 md:mt-0 border-t-[1px] md:border-[1px] md:rounded-md border-slate-300 md:mx-3 md:flex-col md:w-[260px]"
+              className="flex px-2 py-3 mt-1 md:mt-0 border-t-[1px] md:border-[1px] md:rounded-md border-slate-300 md:mx-3 md:flex-col md:w-[260px] lg:w-[220px] xl:w-[250px]"
             >
               <div className="flex items-center justify-center md:h-[150px]">
                 <img
@@ -82,7 +82,7 @@ const Deals = () => {
             </div>
           );
         })}
-        <div className="flex px-2 py-3 border-t-[1px] border-b-[1px] md:border-[1px] md:rounded-md border-slate-300 md:flex-col md:mx-2 md:bg-[#c8102e] md:text-white md:w-[260px]">
+        <div className="flex px-2 py-3 border-t-[1px] border-b-[1px] md:border-[1px] md:rounded-md border-slate-300 md:flex-col md:mx-2 md:bg-[#c8102e] md:text-white md:w-[260px] lg:w-[220px] xl:w-[250px]">
           <div className="md:flex md:justify-center">
             <img
               className="flex md:hidden ml-1.5"

@@ -8,13 +8,13 @@ const WeeklyAdCards = () => {
 
   return (
     <div className="flex flex-col pb-[5rem] ml-[0rem]">
-      <h1 className="grow ml-3 mb-2 pb-3 text-2xl font-bold">Weekly Ads</h1>
+      <h1 className="grow ml-3 mb-2 pb-[5px] text-2xl font-bold">Weekly Ads</h1>
       <div className="flex justify-center ">
-        <div className="flex max-w-[840px] grow">
+        <div className="flex max-w-[840px] lg:flex-col">
           {images.map((image, index) => {
             return (
               <div
-                className="flex shadow1 hover:cursor-pointer  flex-col px-2 mx-[10px] pt-3 pb-4 border-[1px] border-slate-300 max-w-[200px] rounded-md"
+                className="flex shadow1 hover:cursor-pointer  flex-col px-2 mx-[10px] pt-3 pb-4 border-[1px] lg:my-2 border-slate-300 max-w-[200px] xl:max-w-[250px] rounded-md xl:px-8"
                 key={index}
               >
                 <div className="flex justify-center py-2">
