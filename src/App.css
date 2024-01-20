@@ -3,6 +3,11 @@
   background-color: #f9f9f9;
 }
 
+* {
+  min-height: 0;
+  min-width: 0;
+}
+
 .overlay1 {
   z-index: 8;
   position: fixed;

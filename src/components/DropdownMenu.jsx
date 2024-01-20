@@ -40,9 +40,9 @@ const DropdownMenu = ({ options, showDropdown }) => {
           {options.length
             ? options.map((option, index) => {
                 return (
-                  <div key={index}>
+                  <div key={index} className="">
                     <div
-                      className="flex px-2 py-2 text-base text-black hover:bg-slate-200 hover:cursor-pointer"
+                      className="flex px-2 grow py-2 text-base text-black hover:bg-slate-200 hover:cursor-pointer"
                       onMouseOver={() => handleHover(option)}
                       //   onMouseLeave={() => handleUnhover()}
                     >
@@ -83,7 +83,7 @@ const DropdownMenu = ({ options, showDropdown }) => {
         {/* SavingsSubcard */}
         {hoveredOption === "Digital Coupons" ? (
           <Subdropdown
-            options={["Digital"]}
+            options={"Digital Coupons"}
             setHoveredOption={setHoveredOption}
           />
         ) : null}

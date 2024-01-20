@@ -29,11 +29,11 @@ const WaysToSaveDeals = () => {
     <div className="flex pb-[5rem] mx-5 justify-center">
       <div className="flex justify-center">
         <div className="hidden md:absolute md:w-full md:h-[150px] md:flex bg-[#24125f] justify-center z-1">
-          <h1 className="text-white font-bold text-xl mt-[1.5rem]">
+          <h1 className="text-white font-bold text-xl mt-[1.5rem] md:text-2xl">
             More ways to save
           </h1>
         </div>
-        <div className="md:flex-row flex flex-col mx-2 mt-8 justify-center">
+        <div className="md:flex-row flex flex-col mx-2 mt-2 md:mt-[2rem] justify-center">
           {ways2saveDeals.map((deal, index) => {
             return (
               <div
@@ -46,7 +46,7 @@ const WaysToSaveDeals = () => {
                   </h1>
                   <p className="md:text-sm">{deal.description}</p>
                 </div>
-                <div className="bg-[#56b7e6] flex items-center justify-center py-4 rounded-br-md rounded-bl-md">
+                <div className="bg-[#56b7e6] flex items-center justify-center py-4 rounded-br-md rounded-bl-md lg:h-[135px]">
                   <img src={deal.img} className="w-[150px] md:w-[100px]"></img>
                 </div>
                 <div className="flex justify-center mt-3">

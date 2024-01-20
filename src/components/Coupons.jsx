@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const Coupons = ({ coupons }) => {
   return (
-    <div className="flex flex-col pb-[3rem]">
+    <div className="flex flex-col pb-[1rem]">
       <div className="flex pl-4 md:px-[1rem] md:justify-center border-b-[0px] border-slate-300">
         <div className="flex justify-start w-[820px] lg:w-[700px]">
           <h1 className="font-bold text-xl md:text-2xl">Digital coupons</h1>

@@ -11,3 +11,6 @@ export { default as WeeklyAdCards } from "./WeeklyAdCards";
 export { default as WaysToSaveDeals } from "./WaysToSaveDeals";
 export { default as JoinApp } from "./JoinApp";
 export { default as Trending } from "./Trending";
+export { default as RecipeCards } from "./RecipeCards";
+export { default as InstaAds } from "./InstaAds";
+export { default as Footer } from "./Footer";
