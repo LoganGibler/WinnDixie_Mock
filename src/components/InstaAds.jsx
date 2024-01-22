@@ -1,8 +1,8 @@
 import React from "react";
 import { BsInstagram } from "react-icons/bs";
-import instabig1 from "../imgs/insta1.png";
-import instabig2 from "../imgs/insta2.png";
-import instabig3 from "../imgs/insta3.png";
+import instabig1 from "../imgs/InstaApp1.png";
+import instabig2 from "../imgs/InstaApp2.png";
+import instabig3 from "../imgs/InstaApp3.png";
 
 const InstaAds = () => {
   const images1 = [instabig1, instabig1];
@@ -17,7 +17,8 @@ const InstaAds = () => {
           </div>
           <div className="flex ml-5 lg-:text-lg">
             <BsInstagram className="mt-1.5 mr-2" />
-            Follow Us on <p className="underline ml-1">Instagram</p>
+            Follow Us on{" "}
+            <p className="underline ml-1 hover:cursor-pointer">Instagram</p>
           </div>
         </div>
       </div>
@@ -29,7 +30,7 @@ const InstaAds = () => {
               <img
                 key={index}
                 src={image}
-                className="flex mx-5 my-4 shadow1 max-w-[255px]"
+                className="flex mx-5 my-4 shadow1 max-w-[255px] hover:cursor-pointer"
               ></img>
             );
           })}
@@ -41,7 +42,7 @@ const InstaAds = () => {
               <img
                 key={index}
                 src={image}
-                className="flex mx-5 my-4 shadow1 max-w-[255px]"
+                className="flex mx-5 my-4 shadow1 max-w-[255px] hover:cursor-pointer"
               ></img>
             );
           })}

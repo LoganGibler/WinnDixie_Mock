@@ -27,9 +27,9 @@ const Trending = () => {
             Check out what's trending before checking out
           </h1>
         </div>
-        <div className="">
+        <div className="flex">
           <img
-            className="absolute z-1"
+            className="absolute z-1 flex lg:w-full lg:h-[40%]"
             src="https://www.winndixie.com/-/media/media/home-content/whatsnewtrending/windixie-home-mobile.png"
           ></img>
         </div>
@@ -48,7 +48,7 @@ const Trending = () => {
                 Buy a $25 in participating products and earn a 5$ digital
                 coupon.
               </p>
-              <p className="font-semibold hover:cursor-pointer flex mt-[2rem]">
+              <p className="font-semibold hover:cursor-pointer flex mt-[3.5rem]">
                 Shop now <IoIosArrowForward className="text-xl mt-[3px] ml-2" />
               </p>
             </div>
@@ -80,6 +80,10 @@ const Trending = () => {
                           Add a fun, festive, finger food-friendly touch to your
                           table this Mardi Gras with king cake "fries."
                         </p>
+                        <p className="text-[#c8102e] mt-3 flex font-semibold hover:cursor-pointer">
+                          Learn more{" "}
+                          <IoIosArrowForward className="text-lg mt-1" />
+                        </p>
                       </div>
                     ) : null}
                     {index === 1 ? (
@@ -91,9 +95,13 @@ const Trending = () => {
                           Learn more about Certified Angus Beef brand, discover
                           recipes, and more!
                         </p>
+                        <p className="text-[#c8102e] mt-3 flex font-semibold hover:cursor-pointer">
+                          Learn more{" "}
+                          <IoIosArrowForward className="text-lg mt-1" />
+                        </p>
                       </div>
                     ) : null}
-                    {index === 2 ? (
+                    {/* {index === 2 ? (
                       <div>
                         <p className="font-semibold text-[#c8102e]">
                           In-store flyer
@@ -102,7 +110,7 @@ const Trending = () => {
                           Wednesday January 10 - Wednesday January 24
                         </p>
                       </div>
-                    ) : null}
+                    ) : null} */}
                   </div>
                 </div>
               ))}

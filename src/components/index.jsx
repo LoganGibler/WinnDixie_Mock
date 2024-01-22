@@ -14,3 +14,4 @@ export { default as Trending } from "./Trending";
 export { default as RecipeCards } from "./RecipeCards";
 export { default as InstaAds } from "./InstaAds";
 export { default as Footer } from "./Footer";
+export { default as FooterLarge } from "./FooterLarge";

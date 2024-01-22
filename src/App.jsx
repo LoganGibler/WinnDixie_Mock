@@ -18,6 +18,7 @@ import {
   Trending,
   InstaAds,
   Footer,
+  FooterLarge,
 } from "./components";
 
 function App() {
@@ -104,7 +105,12 @@ function App() {
         <div className="hidden md:flex lg:hidden justify-center">
           <WeeklyAdCards />
         </div>
+       
       </div>
+
+      <div className="flex md:hidden">
+          <WeeklyAd />
+        </div>
 
       <div className="">
         <WaysToSaveDeals />
@@ -116,8 +122,11 @@ function App() {
         <Trending />
       </div>
       <InstaAds />
-      <div className="flex justify-center">
+      <div className="flex justify-center lg:hidden">
         <Footer />
+      </div>
+      <div className="">
+        <FooterLarge />
       </div>
 
       {menuActive || showDropdown ? (

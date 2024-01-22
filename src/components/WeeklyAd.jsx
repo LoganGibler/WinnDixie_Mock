@@ -19,7 +19,7 @@ const WeeklyAd = () => {
   };
 
   return (
-    <div className="carousel-container pb-[3rem] mx-0">
+    <div className="carousel-container pb-[2rem] pt-[2rem] mx-0">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="flex flex-col pb-2 border-2 rounded-md">

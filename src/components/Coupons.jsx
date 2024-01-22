@@ -23,10 +23,10 @@ const Coupons = ({ coupons }) => {
               <div className="flex items-center justify-center mr-3 md:h-[160px]">
                 <img
                   src={coupon.productImg}
-                  className="max-w-[90px] h-auto md:max-w-[150px]"
+                  className="max-w-[150px] h-auto md:max-w-[150px]"
                 ></img>
               </div>
-              <div className="mr-5 flex flex-col">
+              <div className="mr-5 flex flex-col max-w-[200px]">
                 <h1 className="font-bold">{coupon.productPrice}</h1>
                 <p className="truncated-text-sm text-sm">{coupon.couponName}</p>
                 <p className="text-sm">{coupon.expiration}</p>
